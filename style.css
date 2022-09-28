@@ -9,6 +9,8 @@ body{
 header{
     background-color: #0D9488;
     height: 60px;
+    width: 100vw;
+    position: fixed;
 }
 nav {
     display: flex;
@@ -89,7 +91,6 @@ nav ul li a:hover{
     width: 50px;
     float: right;
     margin: 10px;
-    filter: drop-shadow(1px 3px 6px #888888);
 }
 /* benefit */
 .container{
@@ -173,4 +174,6 @@ nav ul li a:hover{
     padding: 20px;
     color: white;
     text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+
 }
