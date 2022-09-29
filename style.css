@@ -86,8 +86,9 @@ nav ul li a:hover{
 .text .team{
     justify-content: center;
     margin-bottom: 30px;
-    border: 3px solid #0D9488;
+    border: 3px solid #eee;
     border-radius: 10px;
+    box-shadow: 3px 5px 8px #888888;
 }
 .categories-card{
     display: flex;
