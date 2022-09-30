@@ -15,6 +15,20 @@
     <title>HOME</title>
 </head>
 <body>
+    <!-- modal -->
+    <div class="modal">
+        <div class="box">
+            <div class="box-body">
+                <img src="img/sad-cute.gif" width="200px" alt="">
+                <div class="box-text">
+                    <h4>Sorry</h4><br>
+                    <p>Page Not Available</p>
+                </div>
+            </div>
+            <button onclick="myFunction(-1)" class="button">Close</button>
+        </div>
+    </div>
+
     <!-- preloader -->
     <div id="preloader"></div>
     <!-- header -->
@@ -97,7 +111,7 @@
                     <h2>HTML</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <a href="" class="button">Start</a>
+                <button onclick="myFunction(1)" class="button">Start</button>
             </div>
             <div class="card-body">
                 <img src="img/css.jpg" alt="">
@@ -105,7 +119,7 @@
                     <h2>CSS</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <a href="" class="button">Start</a>
+                <button onclick="myFunction(1)" class="button">Start</button>
             </div>
             <div class="card-body">
                 <img src="img/java.jpg" alt="">
@@ -113,7 +127,7 @@
                     <h2>JavaScript</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <a href="" class="button">Start</a>
+                <button onclick="myFunction(1)" class="button">Start</button>
             </div>
           
         </div>
@@ -170,13 +184,21 @@
         </div>
     </div>
 
+    <!-- modal -->
+    <script>    
+        function myFunction(i) {
+            var box = document.getElementsByClassName('modal')[0];
+
+            if(i === 1) {
+                box.style.display = "block";
+            } else if (i === -1){
+                box.style.display = "none";
+            }
+        }
+    </script>
 
     <script>
         var loader = document.getElementById("preloader");
- 
-        // window.addEventListener("load ", function(){
-        //     loader.style.display = "none";
-        // });
         setTimeout(() => { loader.style.display = "none" 
         }, "1500")
     </script>
