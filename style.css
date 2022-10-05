@@ -10,7 +10,7 @@ body{
 header{
     background-color: #0D9488;
     height: 60px;
-    width: 100vw;
+    width: 100%;
     position:relative;
 }
 nav {
@@ -19,7 +19,7 @@ nav {
     position: fixed;
     background-color: #0D9488;
     height: 60px;
-    width: 100vw;
+    width: 100%;
 }
 nav .logo{
     margin-top: -68px;
@@ -127,7 +127,9 @@ nav ul li a:hover{
 }
 /* card */
 .card{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 30px;
     justify-content: center;
     gap: 30px;
 }
@@ -304,3 +306,117 @@ iframe{
 
 @keyframes slide-top{0%{transform:translateY(0)}100%{transform:translateY(-30px)}}
   
+/* mobile devices */
+@media (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      height: 100vh;
+      justify-content: center;
+    }
+    .hero .hero-text {
+      text-align: center;
+      padding: 0;
+    }
+    .hero img {
+      width: 150px;
+      background-size: cover;
+    }
+  
+    /* categories */
+    .categories {
+      height: 100%;
+    }
+    .title {
+      font-size: 18px;
+    }
+  
+    .categories-card {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      padding: 0 1.5rem;
+    }
+  
+    /* sliders */
+    .slider h3 {
+      font-size: 24px;
+      padding: 0 1.5rem;
+    }
+    .slider p {
+      line-height: 1.5rem;
+      font-size: 16px;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+  
+    .card {
+      display: grid;
+      padding: 1rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .card-body {
+      width: 100%;
+      border-radius: 1.5rem;
+    }
+    .card-body img {
+      width: 100%;
+      border-radius: 1.5rem 1.5rem 0 0;
+      padding: 0;
+    }
+  
+    .content{
+        background-color: white;
+        margin: 100px auto;
+        width: 90%;
+        border-radius: 20px;
+    }
+    
+    /* contact */
+    .contact-content{
+        width: 90%;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 100px;
+    }
+    .contact-text{
+        width: 90%;
+        height: 70px;
+        display: flex;
+        padding-right: 1rem;
+        background-color: #eee;
+        border-radius: 20px;
+    }
+    .contact-text img{
+        width: 40px;
+        height: 40px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    .contact-text p{
+        padding-top: 25px;
+        padding-left: 10px;
+    }
+    .iframe{
+        width: 90%;
+    }
+
+    /* footer */
+    .footbar ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .footbar ul li {
+      text-align: center;
+    }
+  }
