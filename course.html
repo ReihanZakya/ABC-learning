@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
     <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
 </head>
 <body>
     <!-- modal -->
-    <div class="modal">
+    <!-- <div class="modal">
         <div class="box">
             <div class="box-body">
                 <img src="img/sad-cute.gif" width="200px" alt="">
@@ -27,7 +28,7 @@
             </div>
             <button onclick="myFunction(-1)" class="button">Close</button>
         </div>
-    </div>
+    </div> -->
 
     <!-- preloader -->
     <div id="preloader"></div>
@@ -36,16 +37,16 @@
         <nav>
             <img class="logo" src="img/icon/ABC Learning.png" alt="">
             <ul>
-                <li>
+                <li class="active-class">
                     <a href="index.html"><img src="img/icon/home.png" alt=""> Home</a>
                 </li>
-                <li>
-                    <a href="course.html"><img src="img/icon/google-docs.png" alt=""> Course</a>
+                <li class="active-class">
+                    <a href="course.html" class="active"><img src="img/icon/google-docs.png" alt=""> Course</a>
                 </li>
-                <li>
+                <li class="active-class">
                     <a href="about.html"><img src="img/icon/info.png" alt=""> About us</a>
                 </li>
-                <li>
+                <li class="active-class">
                     <a href="contact.html"><img src="img/icon/contact-mail.png" alt=""> Contact us</a>
                 </li>
             </ul>
@@ -66,7 +67,7 @@
                     <h2>HTML</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <button onclick="myFunction(1)" class="button">Start</button>
+               <a href="course_detail.html"> <button onclick="myFunction(1)" class="button">Start</button></a>
             </div>
             <div class="card-body">
                 <img src="img/css.jpg" alt="">
@@ -74,7 +75,7 @@
                     <h2>CSS</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <button onclick="myFunction(1)" class="button">Start</button>
+               <a href="course_detail.html"> <button onclick="myFunction(1)" class="button">Start</button></a>
             </div>
             <div class="card-body">
                 <img src="img/java.jpg" alt="">
@@ -82,7 +83,7 @@
                     <h2>JavaScript</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <button onclick="myFunction(1)" class="button">Start</button>
+               <a href="course_detail.html"> <button onclick="myFunction(1)" class="button">Start</button></a>
             </div>
             <div class="card-body">
                 <img src="img/office.jpg" alt="">
@@ -90,7 +91,7 @@
                     <h2>Microsoft Word</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <button onclick="myFunction(1)" class="button">Start</button>
+               <a href="course_detail.html"> <button onclick="myFunction(1)" class="button">Start</button></a>
             </div>
             <div class="card-body">
                 <img src="img/office.jpg" alt="">
@@ -98,7 +99,7 @@
                     <h2>Microsoft Power Point</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <button onclick="myFunction(1)" class="button">Start</button>
+               <a href="course_detail.html"> <button onclick="myFunction(1)" class="button">Start</button></a>
             </div>
             <div class="card-body">
                 <img src="img/office.jpg" alt="">
@@ -106,7 +107,7 @@
                     <h2>Microsoft Excel</h2><br>
                     <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum?</p><br>
                 </div>
-                <button onclick="myFunction(1)" class="button">Start</button>
+               <a href="course_detail.html"> <button onclick="myFunction(1)" class="button">Start</button></a>
             </div>
         </div>
     </div>
@@ -174,10 +175,10 @@
                 box.style.display = "none";
             }
         }
-    </script>
 
-    <!-- preloader -->
-    <script>
+
+    // preloader
+  
         var loader = document.getElementById("preloader");
  
         // window.addEventListener("load ", function(){
@@ -185,6 +186,13 @@
         // });
         setTimeout(() => { loader.style.display = "none" 
         }, "1500")
+
+        $(document).ready(function(){
+            $(".active-class a").click(function() {
+            $(".active-class a").removeClass("active");
+            $(this).addClass("active");
+            });
+        });
     </script>
 </body>
 </html>

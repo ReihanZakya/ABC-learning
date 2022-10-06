@@ -34,7 +34,14 @@ nav ul{
     list-style-type: none;
     padding: 16px 53px;
 }
-
+header nav ul li a.active{
+    color: #F9BB4A;
+    border-bottom: 3px solid #F9BB4A;
+    padding-bottom: 18px;
+}
+/* .active{
+    color: red;
+} */
 nav ul li a{
     text-decoration: none;
     color: white;
@@ -82,6 +89,7 @@ nav ul li a:hover{
     font-family: 'Lexend Deca', sans-serif;
     font-size: 20px;
     color: rgb(153, 147, 147);
+    text-align: justify;
 }
 .text .team{
     justify-content: center;
@@ -219,7 +227,7 @@ nav ul li a:hover{
 
 }
 
-/* course */
+/* ini about */
 .content{
     background-color: white;
     margin: 100px auto;
@@ -228,7 +236,7 @@ nav ul li a:hover{
     border-radius: 20px;
 }
 
-/* contact */
+/* ini contact */
 .contact-content{
     margin-top: 70px;
     display: flex;
@@ -260,13 +268,58 @@ iframe{
     width: 120%;
     height: 120%;
 }
-
+/* ini course detail */
+.text-course{
+    background-color: white;
+    margin: 50px 50px;
+    width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.text-course img{
+    float: right;
+    width: 30%;
+    padding: 50px;
+    clear: both;
+}
+.tab_navigation{
+    list-style-type: none;
+    display: flex;
+    background-color: #eee;
+}
+.tab_navigation li{
+    padding: 30px;
+    cursor: pointer;
+}
+.tab_navigation li.active{
+    /* background-color: rgb(63, 113, 206); */
+    border-bottom: 2px solid blue;
+}
+.tab_container{
+    display: none;
+}
+.breadcrumb ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    background-color: rgba(202, 200, 200, 0.452);
+    padding: 20px;
+    width: 800px;
+    margin: -50px 0 -80px 50px;
+    border-radius: 10px;
+}
+.breadcrumb ul a{
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+}
+/* ini sitemap */
 .sitemap{
     display: flex;
     justify-content: space-around;
 }
 
-/* preloader */
+/* ini preloader */
 #preloader{
     width: 100%;
     height: 100vh;
@@ -275,7 +328,7 @@ iframe{
     z-index: 100;
 }
 
-/* modal */
+/* ini modal */
 .modal{
     width: 100%;
     height: 100vh;
@@ -330,9 +383,6 @@ iframe{
     /* categories */
     .categories {
       height: 100%;
-    }
-    .title {
-      font-size: 18px;
     }
   
     .categories-card {

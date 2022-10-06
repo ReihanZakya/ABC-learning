@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <!-- <link rel="stylesheet" href="jquery-ui.css"> -->
+    <title>Course Detail</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#tabs" ).tabs();
+    } );
+    </script> -->
+</head>
+<body>
+    <!-- <div id="preloader"></div> -->
+
+    <header>
+        <nav>
+            <img class="logo" src="img/icon/ABC Learning.png" alt="">
+            <ul>
+                <li>
+                    <a href="index.html"><img src="img/icon/home.png" alt=""> Home</a>
+                </li>
+                <li>
+                    <a href="course.html" class="active"><img src="img/icon/google-docs.png" alt=""> Course</a>
+                </li>
+                <li>
+                    <a href="about.html"><img src="img/icon/info.png" alt=""> About us</a>
+                </li>
+                <li>
+                    <a href="contact.html"><img src="img/icon/contact-mail.png" alt=""> Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="margin-top: -20px ;">
+        <div class="title">
+            <p style="color: #0D9488;">Course</p> <br>
+            <h2>Course Detail</h2><br>
+            <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <ul>
+            <li>
+                <a href="">Home  /</a>
+            </li>
+            <li>
+                <a href="">Course  /</a>
+            </li>
+            <li>
+                <a href="">Course Detail</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container" >
+        <section class="text-course">
+            <h3>HTML</h3><br>
+            <p style="color: rgb(153, 147, 147);">Date : 1 October - 30 October</p>
+            <a href=""> <button class="button" style="margin-top: -50px;">Take Course</button></a>
+        </section>
+        <div class="text-course container-tabs" id="tabs">
+            <ul class="tab_navigation">
+                <li>
+                    overview
+                </li>
+                <li>
+                    sylabus
+                </li>
+            </ul>
+            <div class="tab_container_area">
+                <div class="text tab_container" >
+                        <h1 style="color: black;" >About Course</h1><br>
+                        <p>uptate exercitationem expedita sapiente minus earum pariatur quaerat corporis esse consequuntur eum! Reprehenderit atque iste ab sed suscipit vitae laboriosam provident quae totam porro vero aperiam, eum fugiat eveniet in.</p>
+                </div>
+                
+                <div class="text tab_container" >
+                    <div class="tab-desk">
+                        <h1 style="color: black;" >Sylabuss</h1><br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis placeat laudantium fuga laborum reiciendis libero nesciunt aperiam itaque eligendi ipsam dolore natus voluptas magni sapiente minus quo eo.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+
+
+        $(document).ready(function(){
+     
+           $('.tab_container:first').show();;
+           $('.tab_navigation li:first').addClass('active');;
+
+            $('.tab_navigation li').click(function(event){
+
+                index = $(this).index();
+                $('.tab_navigation li').removeClass('active');
+                $(this).addClass('active');
+                $('.tab_container').hide();
+                $('.tab_container').eq(index).show();
+
+            });
+        });
+
+
+    </script>
+
+</body>
+</html>

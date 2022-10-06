@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
     <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,16 +37,16 @@
         <nav>
             <img class="logo" src="img/icon/ABC Learning.png" alt="">
             <ul>
-                <li>
-                    <a href="index.html"><img src="img/icon/home.png" alt=""> Home</a>
+                <li class="active-class">
+                    <a href="index.html" class="active"><img src="img/icon/home.png" alt=""> Home</a>
                 </li>
-                <li>
+                <li class="active-class">
                     <a href="course.html"><img src="img/icon/google-docs.png" alt=""> Course</a>
                 </li>
-                <li>
+                <li class="active-class">
                     <a href="about.html"><img src="img/icon/info.png" alt=""> About us</a>
                 </li>
-                <li>
+                <li class="active-class">
                     <a href="contact.html"><img src="img/icon/contact-mail.png" alt=""> Contact us</a>
                 </li>
             </ul>
@@ -194,13 +195,18 @@
             } else if (i === -1){
                 box.style.display = "none";
             }
-        }
-    </script>
-
-    <script>
+        };
+   
         var loader = document.getElementById("preloader");
         setTimeout(() => { loader.style.display = "none" 
-        }, "1500")
+        }, "1500");
+
+        $(document).ready(function(){
+            $(".active-class a").click(function() {
+            $(".active-class a").removeClass("active");
+            $(this).addClass("active");
+            });
+        });
     </script>
     
 </body>
