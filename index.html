@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="jquery.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js">
     <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +36,7 @@
     <header>
         <nav>
             <img class="logo" src="img/icon/ABC Learning.png" alt="">
-            <i class="menu-toggle-btn fas fa-bars"></i>
+            
             <ul>
                 <li class="active-class">
                     <a href="index.html" class="active"><img src="img/icon/home.png" alt=""> Home</a>
@@ -52,6 +51,11 @@
                     <a href="contact.html"><img src="img/icon/contact-mail.png" alt=""> Contact us</a>
                 </li>
             </ul>
+
+            <div class="hamburger">
+                <img class="icon burger" src="img/icon/hamburger.png" alt="">
+                <img class="icon adios" src="img/icon/close (2).png" alt="">
+            </div>
         </nav>
     </header>
     <!-- header -->
@@ -187,29 +191,9 @@
         </div>
     </div>
 
-    <!-- modal -->
-    <script>    
-        function myFunction(i) {
-            var box = document.getElementsByClassName('modal')[0];
 
-            if(i === 1) {
-                box.style.display = "block";
-            } else if (i === -1){
-                box.style.display = "none";
-            }
-        };
-   
-        var loader = document.getElementById("preloader");
-        setTimeout(() => { loader.style.display = "none" 
-        }, "1500");
+    <script src="function.js"></script>
 
-        $(document).ready(function(){
-            $(".active-class a").click(function() {
-            $(".active-class a").removeClass("active");
-            $(this).addClass("active");
-            });
-        });
-    </script>
     
 </body>
 </html>
