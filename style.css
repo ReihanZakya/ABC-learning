@@ -173,6 +173,7 @@ nav ul li a:hover{
     margin:20px;
     cursor: pointer;
     float: right;
+    clear: both;
 }
 .button:hover{
     box-shadow: 1px 4px 7px #888888;
@@ -293,7 +294,6 @@ iframe{
     cursor: pointer;
 }
 .tab_navigation li.active{
-    /* background-color: rgb(63, 113, 206); */
     border-bottom: 2px solid blue;
 }
 .tab_container{
@@ -312,6 +312,58 @@ iframe{
 .breadcrumb ul a{
     text-decoration: none;
     font-family: 'Lexend Deca', sans-serif;
+}
+.side-menu{
+    float: right;
+    margin:100px 130px;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+.side-menu ul li{
+    padding: 10px;
+}
+.side-menu ul li button{
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+    border: none;
+}
+/* ini schedule */
+.schedule{
+    text-align: center;
+}
+.schedule-body{
+    background-color: #eee;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px 10px 10px 10px;
+    border-radius: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 10px;
+}
+.schedule-body p{
+    color: rgb(88, 86, 86);
+    margin-left: 45px;
+    margin-top: 15px;
+}
+.schedule-body h3{
+    position: absolute;
+    margin-bottom: 3px;
+    padding: 5px 0 0 10px;
+}
+.join-btn{
+    
+    padding: 20px;
+}
+.join-btn button{
+    border: 4px double #115C93;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #115C93;
+    cursor: pointer;
 }
 /* ini sitemap */
 .sitemap{
@@ -337,6 +389,7 @@ iframe{
     top: 0;
     left: 0;
     display: none;
+    z-index: 100;
 }
 .box{
     background-color: white;
@@ -363,6 +416,40 @@ iframe{
 @media (max-width: 600px) {
     body{
         overflow-x: hidden;
+    }
+    header{
+        justify-content: space-around;
+    }
+    nav {
+        justify-content: center;
+        width: 100%;
+    }
+    nav .logo{
+        width: 50%;
+    }
+    nav ul{
+        display: block;
+        width: 100%;
+    }
+    header nav ul li a.active{
+        color: #F9BB4A;
+        border-bottom: 3px solid #F9BB4A;
+        padding-bottom: 18px;
+    }
+    /* .active{
+        color: red;
+    } */
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+        padding-top: 5px;
+        display: inline-flex;
+    }
+    nav ul li a img{
+        display: none;
+    }
+    nav ul li a:hover{
+        color:  #D6CDA4;
     }
     .hero {
       flex-direction: column;
@@ -457,6 +544,33 @@ iframe{
         width: 90%;
     }
 
+    /* detail course */
+    .text-course{
+       width: 80%;
+       margin: 1rem;
+    }
+    .button{
+        width: 7rem;
+        padding: 8px;
+    }
+
+    .tab_navigation{
+       width: 100%;
+    }
+    .tab_container{
+        display: none;
+    }
+    .breadcrumb ul{
+        width: 80%;
+        margin: -4rem 1rem;
+    }
+    section a{
+        font-size: 2px;
+    }
+    .side-menu{
+        display: none;
+    }
+   
     /* footer */
     .footbar ul {
       display: grid;

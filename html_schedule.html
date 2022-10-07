@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Schedule</title>
+</head>
+<body>
+      <!-- modal -->
+      <div class="modal">
+        <div class="box">
+            <div class="box-body">
+                <img src="img/sad-cute.gif" width="200px" alt="">
+                <div class="box-text">
+                    <h4>Sorry</h4><br>
+                    <p>Page Not Available</p>
+                </div>
+            </div>
+            <button onclick="myFunction(-1)" class="button">Close</button>
+        </div>
+    </div>
+
+       <!-- preloader -->
+       <div id="preloader"></div>
+       
+    <header>
+        <nav>
+            <img class="logo" src="img/icon/ABC Learning.png" alt="">
+            <ul>
+                <li>
+                    <a href="index.html"><img src="img/icon/home.png" alt=""> Home</a>
+                </li>
+                <li>
+                    <a href="course.html" class="active"><img src="img/icon/google-docs.png" alt=""> Course</a>
+                </li>
+                <li>
+                    <a href="about.html"><img src="img/icon/info.png" alt=""> About us</a>
+                </li>
+                <li>
+                    <a href="contact.html"><img src="img/icon/contact-mail.png" alt=""> Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="title">
+                <p style="color: #0D9488;">Course</p> <br>
+                <h2>Course Schedule</h2><br>
+                <p style="color: rgb(153, 147, 147);">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>         
+            <div class="breadcrumb" style="margin:-80px 0 0 -100px; padding:100px;">
+                <ul>
+                    <li>
+                        <a href="index.html">Home  /</a>
+                    </li>
+                    <li>
+                        <a href="course.html">Course  /</a>
+                    </li>
+                    <li>
+                        <a href="html_detail.html">Course Detail /</a>
+                    </li>
+                    <li>
+                        <a href="html_schedule.html">Course Schedule</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="schedule">
+                <div class="schedule-body">
+                    <div>
+                        <h3>#01 Introduction HTML</h3><br>
+                        <p>13 October 2022, 09.00 am</p>
+                    </div>
+                    <div class="join-btn">
+                        <button  onclick="myFunction(1)">Join</button>
+                    </div>
+                </div>
+                <div class="schedule-body">
+                    <div>
+                        <h3>#02 Introduction HTML</h3><br>
+                        <p>14 October 2022, 09.00 am</p>
+                    </div>
+                    <div class="join-btn">
+                        <button  onclick="myFunction(1)">Join</button>
+                    </div>
+                </div>
+                <div class="schedule-body">
+                    <div>
+                        <h3>#03 Syntax HTML</h3><br>
+                        <p>15 October 2022, 09.00 am</p>
+                    </div>
+                    <div class="join-btn">
+                        <button  onclick="myFunction(1)">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="social-media">
+            <div class="sosmed">
+                <a href="">
+                    <img src="img/icon/facebook-app-symbol.png" alt="">
+                </a>
+            </div>
+            <div class="sosmed">
+                <a href="https://wa.me/62881023055627" target="_blank">
+                    <img src="img/icon/whatsapp.png" alt="">
+                </a>
+            </div>
+            <div class="sosmed">
+                <a href="">
+                    <img src="img/icon/instagram.png" alt="">
+                </a>
+            </div>
+            <div class="sosmed">
+                <a href="">
+                    <img src="img/icon/twitter.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footbar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="course.html">Course</a>
+                </li>
+                <li>
+                    <a href="about.html">About us</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact us</a>
+                </li>
+                <li>
+                    <a href="sitemap.html">Site map</a>
+                </li>
+                <li>
+                    <a href="privacy.html">Privacy policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright © ABC Learning. All rights reversed.</p>
+        </div>
+    </div>
+
+    <script>
+        // modal
+          function myFunction(i) {
+            var box = document.getElementsByClassName('modal')[0];
+
+            if(i === 1) {
+                box.style.display = "block";
+            } else if (i === -1){
+                box.style.display = "none";
+            }
+        };
+
+        // preloader
+        var loader = document.getElementById("preloader");
+        setTimeout(() => { loader.style.display = "none" 
+        }, "1500");
+    </script>
+</body>
+</html>
