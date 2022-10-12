@@ -20,6 +20,8 @@ nav {
     background-color: #0D9488;
     height: 60px;
     width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 13.5px;
 }
 nav .logo{
     margin-top: -68px;
@@ -33,6 +35,12 @@ nav ul{
     gap: 20px;
     list-style-type: none;
     padding: 16px 53px;
+}
+.regis{
+    /* border: 1px solid #25756e; */
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #1E293B;
 }
 header nav ul li a.active{
     color: #F9BB4A;

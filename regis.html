@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regis.css">
+    <script src="regis.js"></script>
+    <title>Registration</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <a href="index.html"> <img src="img/icon/back.png" alt=""> </a>
+            <h2>Registration</h2>
+            <form class="form" role="form" onsubmit="signUp(event);" action="">
+                <div class="flex">
+                    <div class="form-grup">
+                        <label class="label" for="">First Name</label><br>
+                        <input type="text" class="form-control" id="fname" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-grup">
+                        <label class="label" for="">Last Name</label><br>
+                        <input type="text" class="form-control" id="lname" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="form-grup">
+                        <label class="label" for="">Birthday</label><br>
+                        <input type="date" class="form-control" id="brithday" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-grup">
+                        <label class="label" for="">Region</label><br>
+                        <select name="" id="region" class="form-control" aria-placeholder="region">
+                            <option value="">Indonesia</option>
+                            <option value="">Singapore</option>
+                            <option value="">Philippines</option>
+                            <option value="">India</option>
+                            <option value="">Malaysia</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="form-grup">
+                        <label class="label" for="">Email</label><br>
+                        <input type="text" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-grup">
+                        <label class="label" for="">Phone Number</label><br>
+                        <input type="number" class="form-control" id="phone" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="form-grup">
+                        <label class="label" for="">Username</label><br>
+                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-grup">
+                        <label class="label" for="">Password</label><br>
+                        <input type="text" class="form-control" id="password" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="flex">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
