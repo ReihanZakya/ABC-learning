@@ -1,12 +1,10 @@
 const signUp = e => {
     let fname = document.getElementById('fname').value,
-        lname = document.getElementById('lname').value,
+        username = document.getElementById('username').value,
         email = document.getElementById('email').value,
-        password = document.getElementById('password').value;
         brithday = document.getElementById('brithday').value;
         phone = document.getElementById('phone').value;
         region = document.getElementById('region').value;
-        username = document.getElementById('username').value;
 
     let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
@@ -17,17 +15,18 @@ const signUp = e => {
         );
 
     if(!exist){
-        formData.push({ fname, lname, email, password, brithday, phone, region, username });
+        formData.push({ fname, username, email, brithday, phone, region });
         localStorage.setItem('formData', JSON.stringify(formData));
         document.querySelector('form').reset();
         document.getElementById('fname').focus();
-        alert("Account Created.\n\nPlease Sign In using the link below.");
+        // window.open("thankyou.html");
+        document.location.href = "thankyou.html";
+
     }
     else{
         alert("Ooopppssss... Duplicate found!!!\nYou have already sigjned up");
     }
     e.preventDefault();
-    window.open("index.html");
 }
 
 function signIn(e) {
