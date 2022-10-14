@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="regis.css">
-    <script src="regis.js"></script>
+    <script src="jquery.js"></script>
     <title>Registration</title>
     <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +16,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="card">
         <div class="card-content scale-up-center">
             <a href="index.html"> <img src="img/icon/back.png" alt=""> </a>
             <h2>Registration</h2>
-            <form class="form" role="form" onsubmit="signUp(event);" action="" autocomplete="off">
+            <form id="form" autocomplete="off">
                 <div class="flex">
                     <div class="form-grup">
                         <label class="label" for="">Full Name</label><br>
@@ -54,7 +56,8 @@
                     </div>
                     <div class="form-grup">
                         <label class="label" for="">Phone Number</label><br>
-                        <input type="number" class="form-control" id="phone" minlength="11" placeholder="Phone Number" required>
+                        <input type="number" class="form-control" id="phone" minlength="11" placeholder="Phone Number"
+                            required>
                     </div>
                 </div>
                 <div class="flex">
@@ -63,5 +66,7 @@
             </form>
         </div>
     </div>
+    <script src="regis.js"></script>
 </body>
+
 </html>
