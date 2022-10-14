@@ -18,7 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <!-- datatable -->
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/b-2.2.3/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/b-2.2.3/datatables.min.js"></script>
 </head>
 
 <body>
@@ -30,16 +32,21 @@
 
     <div class="table-content">
         <table id="form-data">
-            <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Brithday</th>
-                <th>Region</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Action</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Brithday</th>
+                    <th>Region</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="row-cont">
+
+            </tbody>
         </table>
     </div>
 

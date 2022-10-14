@@ -1,5 +1,6 @@
 $(document).ready(function () { })
 
+$("#form-data").DataTable();
 // parse itu mengkonversi ke objek
 let formData = JSON.parse(localStorage.getItem('formData')) || []; //ambil data
 // (data) itu parameter
@@ -21,7 +22,7 @@ function table(data) {
             </td>
         </tr> `
         // append buat menyisipkan konten
-        $('#form-data').append(row);
+        $('#row-cont').append(row);
     }
 }
 table(formData);
