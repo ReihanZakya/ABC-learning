@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.color-change-2x{
+    animation:color-change-2x 2s linear infinite alternate both
+}
+
+@keyframes color-change-2x{
+    0%{background:#c0db3d}100%{background:#2234f9}
+}
+body{
+    background-color: #eee;
+    overflow-x: hidden;
+}
+.title{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    padding: 40px;
+    background-color: #1E293B;
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+}
+.table-content{
+    padding: 20px;
+    margin: -80px auto;
+    margin-bottom: 50px;
+}
+.table-content table{
+    border: none;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 20px;
+    display: block;
+    width: 90%;
+    height: 900px;
+    overflow-y: auto;
+}
+.table-content table td{
+    padding: 20px;
+}
+.edit{
+    background-color: blue;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+.delete{
+    background-color: red;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.774);
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.content img{
+    width: 30px;
+    float: right;
+    padding: 30px 350px;
+    cursor: pointer;
+}
+.form-content{
+    background-color: white;
+    width: 40%;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    position: absolute;
+    /* top: -5%; */
+    left: 27%;
+}
+.form-content h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.form-grup .label{
+    font-size: 15px;
+}
+.form-control{
+    background-color: #f8f9fa;
+    padding: 10px 10px;
+    margin-bottom: 1.3rem;
+    width: 180px;
+    border-radius: 10px;
+    border: none;
+}
+.form-control:focus {
+
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #da5767;
+    outline: 0;
+    box-shadow: none;
+
+}
+.flex{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+}
+.button{
+    background-color: blue;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    width: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.copyright{
+    background-color: #1E293B;
+    padding: 30px;
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+}

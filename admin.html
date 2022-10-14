@@ -5,164 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
     <script src="jquery.js"></script>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Document</title>
+    <title>Admin page</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!-- datatable -->
+
 </head>
 
 <body>
-    <table id="form-data" border="1">
-        <td>No</td>
-        <td>Name</td>
-        <td>Username</td>
-        <td>Brithday</td>
-        <td>Region</td>
-        <td>Email</td>
-        <td>Phone Number</td>
-        <td>Action</td>
-    </table>
-
-    <div class="card">
-        <div class="card-content scale-up-center">
-            <h2>Registration</h2>
-            <form id="form-edit" autocomplete="off" style="display: none;">
-                <div class="flex">
-                    <div class="form-grup">
-                        <label class="label" for="">Full Name</label><br>
-                        <input type="text" class="form-control" id="fname" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-grup">
-                        <label class="label" for="">Username</label><br>
-                        <input type="text" class="form-control" id="username" placeholder="Username" required>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="form-grup">
-                        <label class="label" for="">Birthday</label><br>
-                        <input type="date" class="form-control" id="brithday" placeholder="Phone Number" required>
-                    </div>
-                    <div class="form-grup">
-                        <label class="label" for="">Region</label><br>
-                        <select name="" id="region" class="form-control" aria-placeholder="region">
-                            <option value="Indonesia">Indonesia</option>
-                            <option value="Singapore">Singapore</option>
-                            <option value="Philippines">Philippines</option>
-                            <option value="India">India</option>
-                            <option value="Malaysia">Malaysia</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="form-grup">
-                        <label class="label" for="">Email</label><br>
-                        <input type="text" class="form-control" id="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-grup">
-                        <label class="label" for="">Phone Number</label><br>
-                        <input type="number" class="form-control" id="phone" minlength="11" placeholder="Phone Number"
-                            required>
-                    </div>
-                </div>
-                <div class="flex">
-                    <button type="submit" class="button">Submit</button>
-                </div>
-            </form>
+    <header>
+        <div class="title">
+            <h1>Admin - Dashboard</h1>
         </div>
+    </header>
+
+    <div class="table-content">
+        <table id="form-data">
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Brithday</th>
+                <th>Region</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Action</th>
+            </tr>
+        </table>
     </div>
 
-    <script>
-        $(document).ready(function () { })
-        // parse itu mengkonversi ke objek
-        let formData = JSON.parse(localStorage.getItem('formData')) || []; //ambil data
-        // (data) itu parameter
-        function table(data) {
-            for (let i = 0; i < formData.length; i++) {
-                // `` bisa ada string dan objek
-                let row = `
-                <tr>
-                    <td>${i + 1}</td>
-                    <td>${data[i].fname}</td>
-                    <td>${data[i].username}</td>
-                    <td>${data[i].brithday} </td>
-                    <td>${data[i].region}</td>
-                    <td>${data[i].email}</td>
-                    <td>${data[i].phone}</td>
-                    <td>
-                        <a class=\"edit\" href=\"${[i]}\">Edit</a>
-                        <a class=\"delete\" href=\"${[i]}\">Delete</a>
-                    </td>
-                </tr> `
-                // append buat menyisipkan konten
-                $('#form-data').append(row);
-            }
-        }
-        table(formData);
+<div class="content">
+    <img src="img/icon/close (2).png" alt="" class="close">
+    <div class="form-content scale-up-center">
+        <form id="form-edit" autocomplete="off">
+            <h2>Edit</h2>
+            <div class="flex">
+                <div class="form-grup">
+                    <label class="label" for="">Full Name</label><br>
+                    <input type="text" class="form-control" id="fname" placeholder="Full Name" required>
+                </div>
+                <div class="form-grup">
+                    <label class="label" for="">Username</label><br>
+                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="form-grup">
+                    <label class="label" for="">Birthday</label><br>
+                    <input type="date" class="form-control" id="brithday" placeholder="Phone Number" required>
+                </div>
+                <div class="form-grup">
+                    <label class="label" for="">Region</label><br>
+                    <select name="" id="region" class="form-control" aria-placeholder="region">
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="India">India</option>
+                        <option value="Malaysia">Malaysia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="form-grup">
+                    <label class="label" for="">Email</label><br>
+                    <input type="text" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-grup">
+                    <label class="label" for="">Phone Number</label><br>
+                    <input type="text" class="form-control" id="phone" minlength="11" maxlength="13" placeholder="Phone Number" required>
+                </div>
+            </div>
+            <div class="flex">
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
 
-        // delete
-      // DELETE FUNCTION
-      $('.delete').click(function(e){
-            e.preventDefault();
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-            if (result.isConfirmed) {
-                let selectedDeleteIndex = $(this).attr("href");
-                $(this).removeAttr("href");
-                formData.splice(selectedDeleteIndex, 1);
-                localStorage.setItem('formData', JSON.stringify(formData));
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    icon: 'deleted',
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
-                }).then((ogeh) => {
-                    if (ogeh.isConfirmed) {
-                        location.reload();
-                    }
-                })
-            }
-            e.preventDefault();
-            })
-           
+<footer>
+    <div class="copyright">
+        <p>Copyright © ABC Learning. All rights reversed.</p>
+    </div>
+</footer>
+<script src="admin.js"></script>
 
-        });
-        $(".edit").click(function (a) {
-
-            $("#form-edit").show();
-            let index2 = $(this).attr('href');
-            // pangggil datanya sesuai index
-            let fname = $("#fname").val(formData[index2].fname);
-            let username = $("#username").val(formData[index2].username);
-            let email = $("#email").val(formData[index2].email);
-            let brithday = $("#brithday").val(formData[index2].brithday);
-            let phone = $("#phone").val(formData[index2].phone);
-            let region = $("#region").val(formData[index2].region);
-
-            a.preventDefault();
-            // editnya dan submit
-            $("#form-edit").submit(function (a) {
-
-                formData[index2].fname = $("#fname").val();
-                formData[index2].username = $("#username").val();
-                formData[index2].email = $("#email").val();
-                formData[index2].brithday = $("#brithday").val();
-                formData[index2].phone = $("#phone").val();
-                formData[index2].region = $("#region").val();
-
-                localStorage.setItem("formData", JSON.stringify(formData));
-                location.reload();
-                a.preventDefault();
-            })
-        })
-    </script>
 </body>
 
 </html>
