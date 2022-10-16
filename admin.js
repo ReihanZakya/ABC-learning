@@ -1,31 +1,31 @@
 $(document).ready(function () { })
 
-$("#form-data").DataTable();
-// parse itu mengkonversi ke objek
-let formData = JSON.parse(localStorage.getItem('formData')) || []; //ambil data
-// (data) itu parameter
-function table(data) {
-    for (let i = 0; i < formData.length; i++) {
-        // `` bisa ada string dan objek
-        let row = `
-        <tr class= \'fade\'>
-            <td>${i + 1}</td>
-            <td>${data[i].fname}</td>
-            <td>${data[i].username}</td>
-            <td>${data[i].brithday} </td>
-            <td>${data[i].region}</td>
-            <td>${data[i].email}</td>
-            <td>${data[i].phone}</td>
-            <td>
-                <a class=\"edit\" href=\"${[i]}\">Edit</a>
-                <a class=\"delete\" href=\"${[i]}\">Delete</a>
-            </td>
-        </tr> `
-        // append buat menyisipkan konten
-        $('#row-cont').append(row);
-    }
-}
-table(formData);
+let trow = $("#form-data").DataTable({
+    order: [[0, 'desc']],  
+    autoWidth: false,
+  });
+  // parse itu mengkonversi ke objek
+  let formData = JSON.parse(localStorage.getItem("formData")) || []; //ambil data
+  // (data) itu parameter
+  function table(data) {
+    formData.forEach((formData, index) => {
+      trow.row
+        .add([
+          `<p> ABC01-` + Math.floor(Math.random()*9999) + `</p>` ,
+          formData.fname,
+          formData.username,
+          formData.brithday,
+          formData.region,
+          formData.email,
+          formData.phone,
+          `<a class=\"edit\" href=\"` +index +`\""><img src=\"img/icon/editing.png\"></a>
+          <a class=\"delete\" href=\"` +index +`\""><img src=\"img/icon/delete.png\"></a>
+          `,
+        ])
+        .draw();
+    });
+  }
+  table(formData);
 
 // delete
 // DELETE FUNCTION
@@ -41,8 +41,11 @@ $('.delete').click(function(e){
         confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
     if (result.isConfirmed) {
+
         let DeleteIndex = $(this).attr("href");
+
         $(this).removeAttr("href");
+
         formData.splice(DeleteIndex, 1);
         localStorage.setItem('formData', JSON.stringify(formData));
         Swal.fire({
