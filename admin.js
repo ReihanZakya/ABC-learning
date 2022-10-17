@@ -1,17 +1,18 @@
 $(document).ready(function () { })
 
 let trow = $("#form-data").DataTable({
-    order: [[0, 'desc']],  
+    // order: [[0, 'desc']],  
+    // ordering: false,
     autoWidth: false,
   });
   // parse itu mengkonversi ke objek
-  let formData = JSON.parse(localStorage.getItem("formData")) || []; //ambil data
+  let formData = JSON.parse(localStorage.getItem("formData")) || []; //ambil data 
   // (data) itu parameter
   function table(data) {
     formData.forEach((formData, index) => {
       trow.row
         .add([
-          `<p> ABC01-` + Math.floor(Math.random()*9999) + `</p>` ,
+          (index+1) ,
           formData.fname,
           formData.username,
           formData.brithday,
@@ -75,7 +76,6 @@ $(".edit").click(function (a) {
     $(".content").css("display","block");
     $(".close").click(function(){
        $(".content").css("display","none");
-       location.reload();
     })
 
     let EditIndex = $(this).attr('href');

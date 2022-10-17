@@ -66,7 +66,7 @@ $(document).ready(function(){
 
         if(!exist){
             e.preventDefault();
-            formData.push({ fname, username, email, brithday, phone, region });
+            formData.unshift({ fname, username, email, brithday, phone, region });
             localStorage.setItem('formData', JSON.stringify(formData));
             // window.open("thankyou.html");
             document.location.href = "thankyou.html";
