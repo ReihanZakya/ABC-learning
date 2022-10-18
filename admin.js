@@ -35,8 +35,16 @@ $("#form").submit(function(e){
         // window.open("thankyou.html");
         // document.location.href = "thankyou.html";
         e.preventDefault();
-        alert("thankyou");
-        location.reload();
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your change has been saved',
+            showConfirmButton: false,
+            timer: 1000
+            })
+            setTimeout(function(){
+                location.reload();
+            },1000)
 
     }
     else{
