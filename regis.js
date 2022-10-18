@@ -61,7 +61,8 @@ $(document).ready(function(){
 
         let exist = formData.length && 
             JSON.parse(localStorage.getItem('formData')).some(data => 
-                data.email.toLowerCase() == email.toLowerCase()
+                data.email.toLowerCase() == fname.toLowerCase() &&
+                data.email.toLowerCase() == phone.toLowerCase()
             );
 
         if(!exist){
