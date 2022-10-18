@@ -6,11 +6,15 @@ body{
     background-color: #eee;
     overflow-x: hidden;
 }
-
+main{
+    background-color: #eee;
+    width: 100%;
+    min-height: 100vh;
+}
 .title{
     text-align: center;
     width: 100%;
-    height: 100px;
+    height: 80px;
     padding: 40px;
     background-color: #1E293B;
     font-family: 'Lexend Deca', sans-serif;
@@ -18,10 +22,9 @@ body{
 }
 .table-content{
     padding: 20px;
-    margin: -80px auto;
+    margin: 0 auto;
     margin-bottom: 50px;
-    background-color: #eee;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .table-content table{
     border: none;
@@ -52,7 +55,32 @@ body{
     display: none;
     z-index: 100;
 }
-.content img{
+.show{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.774);
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.add{
+    background-color: blue;
+    border: none;
+    padding: 10px;
+    margin: 20px 0 5px 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.close{
+    width: 30px;
+    float: right;
+    padding: 30px 350px;
+    cursor: pointer;
+}
+.close1{
     width: 30px;
     float: right;
     padding: 30px 350px;

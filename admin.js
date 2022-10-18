@@ -1,5 +1,51 @@
 $(document).ready(function () { })
 
+$(".add").click(function(){
+    $(".show").show();
+})
+$(".close1").click(function(){
+   $(".show").css("display","none");
+   location.reload();
+});
+
+$("#form").submit(function(e){
+
+
+    let fname = $("#form #fname").val();
+    let username = $("#form #username").val();
+    let email = $("#form #email").val();
+    let brithday = $("#form #brithday").val();
+    let phone = $("#form #phone").val();
+    let region = $("#form #region").val();
+
+
+
+    let formData = JSON.parse(localStorage.getItem('formData')) || [];
+
+
+    let exist = formData.length && 
+        JSON.parse(localStorage.getItem('formData')).some(data => 
+            data.email.toLowerCase() == email.toLowerCase()
+        );
+
+    if(!exist){
+       
+        formData.unshift({ fname, username, email, brithday, phone, region });
+        localStorage.setItem('formData', JSON.stringify(formData));
+        // window.open("thankyou.html");
+        // document.location.href = "thankyou.html";
+        e.preventDefault();
+        alert("thankyou");
+        location.reload();
+
+    }
+    else{
+        alert("Ooopppssss... Duplicate found!!!\nYou have already sigjned up");
+        // document.location.href= "regis.html";
+    }
+   
+})
+
 let trow = $("#form-data").DataTable({
     // order: [[0, 'desc']],  
     // ordering: false,
