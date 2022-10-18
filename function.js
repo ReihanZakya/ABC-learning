@@ -1,13 +1,13 @@
 // modal
-function myFunction(i) {
-    var box = document.getElementsByClassName('modal')[0];
+// function myFunction(i) {
+//     var box = document.getElementsByClassName('modal')[0];
 
-    if(i === 1) {
-        box.style.display = "block";
-    } else if (i === -1){
-        box.style.display = "none";
-    }
-};
+//     if(i === 1) {
+//         box.style.display = "block";
+//     } else if (i === -1){
+//         box.style.display = "none";
+//     }
+// };
 //    preloader
 var loader = document.getElementById("preloader");
 setTimeout(() => { loader.style.display = "none" 
@@ -15,6 +15,13 @@ setTimeout(() => { loader.style.display = "none"
 
 // gagal
 $(document).ready(function(){
+    $(".popup").click(function(){
+        $(".modal").show();
+    })
+    $(".popupclose").click(function(){
+        $(".modal").hide();
+    })
+
     $(".active-class a").click(function() {
     $(".active-class a").removeClass("active");
     $(this).addClass("active");
