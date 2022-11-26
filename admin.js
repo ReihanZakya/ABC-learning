@@ -103,18 +103,7 @@ $('.delete').click(function(e){
 
         formData.splice(DeleteIndex, 1);
         localStorage.setItem('formData', JSON.stringify(formData));
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'deleted',
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((ogeh) => {
-            if (ogeh.isConfirmed) {
-                location.reload();
-            }
-        })
+        location.reload();
     }
     e.preventDefault();
     })

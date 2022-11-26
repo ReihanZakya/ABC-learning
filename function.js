@@ -22,6 +22,14 @@ $(document).ready(function(){
         $(".modal").hide();
     })
 
+    $(".popup-regis").click(function(){
+        $(".modal").show();
+        $("#change").text('Registration required');
+    })
+    $(".popupclose-regis").click(function(){
+        $(".modal").hide();
+    })
+
     $(".active-class a").click(function() {
     $(".active-class a").removeClass("active");
     $(this).addClass("active");
